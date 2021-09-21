@@ -23,6 +23,7 @@ jobs:
 
     - name: npm install, build, and test
       run: |
+        npm install jsonwebtoken --save
         npm install
         npm run start:server
 
