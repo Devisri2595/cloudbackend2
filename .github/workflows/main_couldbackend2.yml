@@ -49,6 +49,6 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'couldbackend2'
+        app-name: 'couldbackend3'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0b3a726cb73e484486ad46a6daa3f0d3 }}
-        package: ./dist/couldbackend2
+        package: ./dist/couldbackend3
