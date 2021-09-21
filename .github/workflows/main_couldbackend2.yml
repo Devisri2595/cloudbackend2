@@ -24,8 +24,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build --if-present
-        npm run test --if-present
+        npm run start:server
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
@@ -51,6 +50,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'couldbackend2'
-        slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0b3a726cb73e484486ad46a6daa3f0d3 }}
-        package: .
+        package: ./dist/couldbackend2
